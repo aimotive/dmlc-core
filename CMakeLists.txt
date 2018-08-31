@@ -168,3 +168,5 @@ add_custom_target(dmlc_lint COMMAND ${CMAKE_COMMAND} -DMSVC=${MSVC} -DPYTHON_EXE
 # Setup testing
 include(CTest)
 add_subdirectory(test/unittest)
+
+install(TARGETS dmlc EXPORT xgboost-targets ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
